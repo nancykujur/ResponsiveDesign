@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostly Fluid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .parent{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box1{
+            background-color:darkblue ;
+            height: 50vh;
+            width:100%;
+        }
+        .box2{
+            background-color:royalblue;
+            height: 40vh;
+            width:50%
+        }
+        .box3{
+            background-color:lightblue ;
+            height: 40vh;
+            width:50%
+        }
+        .box4{
+            background-color:darkgray;
+            height: 10vh;
+            width:50%;
+        }
+        .box5{
+            background-color:lightgray;
+            height: 10vh;
+            width:50%;
+        }
+       @media screen and (max-width:400px ) {
+
+            .box1,.box2 ,.box3, .box4, .box5{
+                width: 100%;
+            }
+            .box1{
+                height:125vh;
+            }
+            .box2, .box3,.box4, .box5{
+                height:50vh;
+            }
+        }
+        @media screen and (max-width:800px ) and (min-width:400px){
+
+            .parent {
+                flex-direction: row;
+
+            }
+            .box1{
+                height: 50vh;
+                width:100%;
+            }
+            .box2, .box3{
+                height: 40vh;
+                width:50%
+            }
+            .box4, .box5{
+                height: 10vh;
+                width:50%;
+            }
+        }
+        @media screen and (min-width:800px) {
+            .parent {
+                flex-direction: row;
+                width: 800px;
+                margin: auto;
+            }
+
+            .box1 {
+                height: 50vh;
+                width: 60%;
+            }
+
+            .box2 {
+                height: 50vh;
+                width: 40%
+            }
+
+            .box3, .box4, .box5 {
+                height: 50vh;
+                width: 33.333%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</div>
+
+
+</body>
+</html>

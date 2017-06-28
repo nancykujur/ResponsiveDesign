@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Shifter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box1{
+            background-color:darkblue ;
+        }
+        .box2{
+            background-color:royalblue;
+        }
+        .box3{
+            background-color:lightblue ;
+        }
+        @media screen and (max-width:400px ) {
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .box1{
+                height: 20vh;
+            }
+            .box2{
+                height: 60vh;
+            }
+            .box3{
+                height: 100vh;
+            }
+        }
+        @media screen and (max-width:900px ) and (min-width:400px){
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .box1{
+                height: 25vh;
+            }
+            .box2{
+                height: 50vh;
+            }
+            .box3{
+                height: 60vh;
+            }
+
+        }
+        @media screen and (min-width:900px) {
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .parent{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .box1{
+                height: 100vh;
+                width: 20vh;
+            }
+            .box2{
+                height: 50vh;
+                width: 100vh;
+            }
+            .box3{
+                height: 50vh;
+                width:100vh;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1"></div>
+    <div class="parent">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</div>
+
+</body>
+</html>
